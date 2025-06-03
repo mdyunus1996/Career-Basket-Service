@@ -1,0 +1,97 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import HeroBackground from "@/asserts/hero-background.png";
+const HeroSection = () => {
+  return (
+    <section
+      id="home"
+      className="relative bg-gradient-radial-hero section-padding min-h-[80vh] flex items-center overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-primary opacity-5 -z-10"></div>
+
+      <div className="absolute inset-0 z-0">
+        <img
+          src={HeroBackground}
+          alt="Success Story Background"
+          className="w-full h-full object-cover blur-sm brightness-75"
+        />
+        {/* <div className="absolute inset-0 bg-orange-500/20 backdrop-blur-sm" /> */}
+      </div>
+
+      <div className="container z-10 mx-auto px-4 md:px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6">
+            <span className="gradient-text">Career Basket Services</span>
+            <br />
+            <span
+              className="text-1xl md:text-3xl lg:text-5xl font-bold mb-6 text-primary"
+              style={{ color: "#9B0000" }}
+            >
+              -Think. Create. Achieve-
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto mb-10 text-white">
+            CBS Group of Companies is dedicated to transforming the educational
+            landscape. We empower students and institutions with innovative
+            solutions for a future-ready world.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Button
+              size="lg"
+              className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity neumorphism-button !shadow-none !text-white"
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Explore Our Services <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:bg-primary/10 transition-colors shadow-md"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Get In Touch
+            </Button>
+          </div>
+        </motion.div>
+        {/* <motion.div
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-32"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <div className="w-full h-full bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+        </motion.div> */}
+      </div>
+      {/* <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="w-full max-w-md lg:max-w-xl"
+      >
+        <img
+          src={HeroBackground}
+          alt="Hero Illustration"
+          className="w-full h-auto rounded-xl shadow-xl"
+        />
+      </motion.div> */}
+      <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-accent/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+      <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-secondary/10 rounded-full blur-3xl -z-10 animate-pulse animation-delay-2000"></div>
+    </section>
+  );
+};
+
+export default HeroSection;

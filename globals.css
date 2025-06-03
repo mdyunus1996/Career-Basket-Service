@@ -1,0 +1,28 @@
+:root {
+  --primary: 252 94% 67%; /* e.g., Purple-Pink */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 100% 56%; /* e.g., Blue */
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 48 100% 67%; /* e.g., Yellow-Orange */
+  --accent-foreground: 0 0% 10%;
+
+  --background: 0 0% 100%;
+  --background-rgb: 255, 255, 255;
+  --foreground: 240 10% 3%;
+
+  --border: 240 6% 90%;
+  --input: 240 6% 90%;
+  --ring: 240 4% 74%;
+
+  --muted: 240 4% 95%;
+  --muted-foreground: 240 3.8% 46.1%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+}
