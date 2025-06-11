@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative bg-gradient-radial-hero section-padding min-h-[80vh] flex items-center overflow-hidden"
+      className="relative bg-gradient-radial-hero min-h-[80vh] flex items-center overflow-hidden"
     >
       <div className="absolute inset-0 bg-primary opacity-5 -z-10"></div>
 
@@ -26,20 +26,19 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6">
-            <span style={{ color: "#9B0000" }}>Career Basket Services</span>
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 deep-maroon">
+            Career Basket Services
             <br />
             <span
-              className="text-1xl md:text-3xl lg:text-5xl font-bold mb-6 text-primary"
-              style={{ color: "#9B0000" }}
+              className="text-1xl md:text-3xl lg:text-4xl font-bold mb-6 deep-maroon"
+              // style={{ color: "#9B0000" }}
             >
-              -Engage. Educate. Evolve-
+              Empowering Students. Engaging Educators. Enabling Institutions.
             </span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto mb-10 text-white">
-            CBS Group of Companies is dedicated to transforming the educational
-            landscape. We empower students and institutions with innovative
-            solutions for a future-ready world.
+            Your trusted partner in career discovery, student outreach, and
+            educator engagement since 2017.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button
@@ -47,13 +46,13 @@ const HeroSection = () => {
               className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity neumorphism-button !shadow-none !text-white"
               onClick={() =>
                 document
-                  .getElementById("about")
+                  .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Explore Our Services <ArrowRight className="ml-2 h-5 w-5" />
+              Explore Our Services
             </Button>
-            <Button
+            {/* <Button
               variant="outline"
               size="lg"
               className="border-primary text-primary hover:bg-primary/10 transition-colors shadow-md"
@@ -64,7 +63,7 @@ const HeroSection = () => {
               }
             >
               Get In Touch
-            </Button>
+            </Button> */}
           </div>
         </motion.div>
         {/* <motion.div
