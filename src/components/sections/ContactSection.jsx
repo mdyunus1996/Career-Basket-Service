@@ -47,9 +47,8 @@ const ContactSection = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            We'd love to hear from you. Whether you're interested in our
-            services, partnerships, or have any questions, feel free to reach
-            out.
+            <span className="font-bold">Partner With CBS</span> Let’s build
+            meaningful opportunities together.
           </p>
         </motion.div>
 
@@ -66,13 +65,10 @@ const ContactSection = () => {
                 <MapPin size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold">
-                  Career Basket Services
-                </h3>
+                <h3 className="text-xl font-semibold">Locations</h3>
                 <p className="text-foreground/70">
-                  3rd floor, Apeejay Business Centre Old Number 12 and New,
-                  Number 39, Haddows Rd, Nungambakkam, Chennai, Tamil Nadu
-                  600006
+                  Chennai | Mumbai | Delhi | Kota | Hyderbad | Vijayawada |
+                  Visakhapatnam
                 </p>
               </div>
             </div>
@@ -82,7 +78,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Email Us</h3>
-                <p className="text-foreground/70">bharat@careerbaskets.com</p>
+                <p className="text-foreground/70">info@careerbasket.com</p>
               </div>
             </div>
             <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -91,13 +87,13 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Call Us</h3>
-                <p className="text-foreground/70">+91 94443 34755</p>
+                <p className="text-foreground/70">+91- 9444334755</p>
               </div>
             </div>
           </motion.div>
 
           <motion.form
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
