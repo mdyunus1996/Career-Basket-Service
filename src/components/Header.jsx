@@ -47,7 +47,7 @@ const Header = () => {
               key={item.name}
               variant="ghost"
               onClick={() => scrollToSection(item.path)}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-secondary hover:font-bold transition-colors font-medium"
             >
               {item.name}
             </Button>
@@ -78,7 +78,7 @@ const Header = () => {
                 key={item.name}
                 variant="ghost"
                 onClick={() => scrollToSection(item.path)}
-                className="w-full text-lg py-3 text-foreground hover:text-primary transition-colors"
+                className="w-full text-lg py-3 text-foreground hover:text-secondary hover:font-bold transition-colors"
               >
                 {item.name}
               </Button>
