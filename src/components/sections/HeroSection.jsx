@@ -26,14 +26,14 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6">
-            <span className="gradient-text">Career Basket Services</span>
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6">
+            <span style={{ color: "#9B0000" }}>Career Basket Services</span>
             <br />
             <span
               className="text-1xl md:text-3xl lg:text-5xl font-bold mb-6 text-primary"
               style={{ color: "#9B0000" }}
             >
-              -Think. Create. Achieve-
+              -Engage. Educate. Evolve-
             </span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto mb-10 text-white">
