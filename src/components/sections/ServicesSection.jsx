@@ -1,29 +1,43 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Laptop, Layers, Users2, Brain } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { Users2, Globe, BookOpenCheck, Award, Layers } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const services = [
   {
-    icon: <Laptop className="h-8 w-8 text-primary" />,
-    title: 'E-Learning Platforms',
-    description: 'Customizable and scalable learning management systems.',
+    icon: <Users2 className="h-8 w-8 text-primary" />,
+    title: "Student Counselling Events",
+    description: "UG, PG, and Study Abroad counseling and engagement programs.",
+  },
+  {
+    icon: <BookOpenCheck className="h-8 w-8 text-primary" />,
+    title: "CLAT, MBA & STEM Masterclasses",
+    description: "Focused academic masterclasses for competitive preparation.",
+  },
+  {
+    icon: <Award className="h-8 w-8 text-primary" />,
+    title: "Educator Meetups & Awards",
+    description:
+      "Networking events, panel discussions, and educator recognition.",
   },
   {
     icon: <Layers className="h-8 w-8 text-primary" />,
-    title: 'Digital Content Creation',
-    description: 'Engaging and interactive educational materials for all levels.',
+    title: "College Brand Collaborations",
+    description: "Partnerships with institutions to amplify student outreach.",
   },
   {
-    icon: <Users2 className="h-8 w-8 text-primary" />,
-    title: 'Teacher Training Programs',
-    description: 'Empowering educators with modern pedagogical techniques.',
-  },
-  {
-    icon: <Brain className="h-8 w-8 text-primary" />,
-    title: 'AI-Powered Tutoring',
-    description: 'Personalized learning paths and adaptive assessments.',
+    icon: <Globe className="h-8 w-8 text-primary" />,
+    title: "Content & Webinar Co-hosting",
+    description: "Collaborative webinars and co-branded digital content.",
   },
 ];
 
@@ -37,11 +51,10 @@ const ServicesSection = () => {
         delay: i * 0.2,
         duration: 0.5,
         type: "spring",
-        stiffness: 100
-      }
-    })
+        stiffness: 100,
+      },
+    }),
   };
-
   return (
     <section id="services" className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
@@ -53,30 +66,29 @@ const ServicesSection = () => {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Comprehensive solutions designed to elevate the educational experience.
-          </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {services.map((service, index) => (
-            <motion.custom
-              key={service.title}
+            <motion.div
+              key={service.name}
               custom={index}
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              component={Card}
-              className="overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+              className="flex flex-col relative p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 bg-white"
             >
-              <CardHeader className="bg-primary/5">
-                <div className="p-3 bg-primary/10 rounded-full w-fit mb-3">{service.icon}</div>
-                <CardTitle>{service.title}</CardTitle>
+              <CardHeader className="items-center text-center">
+                <CardTitle className="text-primary text-lg md:text-xl font-semibold">
+                  {service.name}
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription>{service.description}</CardDescription>
+              <CardContent className="flex-grow">
+                <CardDescription className="text-center">
+                  {service.description}
+                </CardDescription>
               </CardContent>
-            </motion.custom>
+            </motion.div>
           ))}
         </div>
       </div>
