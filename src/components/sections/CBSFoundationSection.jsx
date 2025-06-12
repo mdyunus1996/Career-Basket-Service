@@ -32,9 +32,9 @@ const CBSFoundationSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-12"
         >
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2">
               CBS Foundation
             </h2>
@@ -50,13 +50,16 @@ const CBSFoundationSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <div className="max-w-3xl mx-auto mb-12 text-center text-base md:text-lg text-foreground/70 leading-relaxed">
+          <div className="max-w-4xl mx-auto mb-12 text-left text-base md:text-lg text-foreground/70 leading-relaxed">
             <p>
               The CBS Foundation is the impact-driven arm of Career Basket,
-              committed to educational equity and community engagement. We’ve
-              impacted thousands of learners in underserved regions through:
+              committed to educational equity and community engagement.
             </p>
-            <ul className="mt-6 space-y-4 text-left">
+            <p className="text-left mt-2">
+              We’ve impacted thousands of learners in underserved regions
+              through:
+            </p>
+            <ul className="mt-2 ml-8 space-y-4 text-left">
               {[
                 "School outreach in Tier 2/3 cities",
                 "Free counselling & scholarship awareness workshops",
@@ -82,7 +85,9 @@ const CBSFoundationSection = () => {
           <h3 className="text-2xl font-semibold text-primary">
             CBS Foundation Impact Highlights
           </h3>
-          <p className="text-sm text-foreground/60">CBS Group 2023–24</p>
+          <p className="text-sm text-foreground/60 font-bold">
+            CBS Group 2023–24
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">

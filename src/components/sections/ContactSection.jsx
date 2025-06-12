@@ -47,7 +47,7 @@ const ContactSection = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            <span className="font-bold">Partner With CBS</span> Let’s build
+            <span className="font-bold">Partner With CBS :</span> Let’s build
             meaningful opportunities together.
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
-            className="space-y-8"
+            className="space-y-11"
           >
             <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="p-3 bg-primary/10 rounded-full text-primary">
@@ -66,7 +66,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Locations</h3>
-                <p className="text-foreground/70">
+                <p className="text-foreground/70 text-sm">
                   Chennai | Mumbai | Delhi | Kota | Hyderbad | Vijayawada |
                   Visakhapatnam
                 </p>
@@ -132,21 +132,6 @@ const ContactSection = () => {
             </div>
             <div>
               <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-foreground mb-1"
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                required
-                className="w-full px-4 py-2 border border-input rounded-md focus:ring-primary focus:border-primary transition-colors"
-              />
-            </div>
-            <div>
-              <label
                 htmlFor="message"
                 className="block text-sm font-medium text-foreground mb-1"
               >
@@ -155,7 +140,7 @@ const ContactSection = () => {
               <textarea
                 name="message"
                 id="message"
-                rows="4"
+                rows="1"
                 required
                 className="w-full px-4 py-2 border border-input rounded-md focus:ring-primary focus:border-primary transition-colors"
               ></textarea>
@@ -164,7 +149,7 @@ const ContactSection = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity neumorphism-button !text-white"
+                className="w-full bg-gradient-primary charcoal-gray hover:opacity-90 transition-opacity neumorphism-button"
               >
                 Send Message
               </Button>

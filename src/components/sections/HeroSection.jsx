@@ -41,10 +41,10 @@ const HeroSection = () => {
             Your trusted partner in career discovery, student outreach, and
             educator engagement since 2017.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 ">
             <Button
               size="lg"
-              className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity neumorphism-button !shadow-none !text-white font-bold"
+              className="bg-gradient-primary charcoal-gray hover:opacity-90 hover:font-extrabold transition-opacity neumorphism-button !shadow-none  font-bold"
               onClick={() =>
                 document
                   .getElementById("contact")
