@@ -234,7 +234,8 @@ const ClientPartnershipsSection = () => {
               className="flex justify-center"
             >
               <img
-                className="h-16 md:h-20 object-contain hover:scale-105 ease-in-out transition-all duration-300 border border-orange-700 rounded-sm"
+                // className="h-16 md:h-20 object-contain hover:scale-105 ease-in-out transition-all duration-300 border border-orange-700 rounded-sm"
+                className="h-16 md:h-20 object-contain hover:scale-105 ease-in-out transition-all duration-300"
                 alt={logo.alt}
                 src={logo.src}
               />
