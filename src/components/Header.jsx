@@ -47,7 +47,7 @@ const Header = () => {
               key={item.name}
               variant="ghost"
               onClick={() => scrollToSection(item.path)}
-              className="text-foreground hover:text-secondary hover:font-bold transition-colors font-medium"
+              className="text-foreground hover:text-charcoal-gray hover:font-extrabold transition-colors font-bold"
             >
               {item.name}
             </Button>
