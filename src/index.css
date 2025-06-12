@@ -118,5 +118,9 @@
 }
 
 .deep-maroon {
-  color: hsl(4, 90%, 58%);
+  color: hsl(0, 100%, 60%);
+}
+
+.charcoal-gray {
+  color: hsl(0,0%,26%); /* Charcoal Gray */
 }
