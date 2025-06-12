@@ -4,26 +4,26 @@ import Students from "../../asserts/students.jpeg";
 const statsData = [
   {
     sl: 0,
-    value: "52",
-    label: "MEGA CAREER EVENTS",
+    value: "400,000+",
+    label: "Students engaged through school and college outreach",
     icon: <Award className="w-8 h-8 text-background" />,
   },
   {
     sl: 1,
-    value: "42000",
-    label: "SUCCESSFUL APPLICATIONS",
+    value: "900+",
+    label: "Educators mobilized through workshops and panels",
     icon: <Users className="w-8 h-8 text-background" />,
   },
   {
     sl: 2,
-    value: "182000",
-    label: "STUDENTS COUNSELLED",
+    value: "200+",
+    label: "Successful student-centric events",
     icon: <Briefcase className="w-8 h-8 text-background" />,
   },
   {
     sl: 3,
-    value: "1800",
-    label: "ENROLLMENTS",
+    value: "100+",
+    label: "University and institutional collaborations",
     icon: <TrendingUp className="w-8 h-8 text-background" />,
   },
 ];
@@ -37,19 +37,25 @@ const Hexagon = ({ value, label, icon, delay, index }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay }}
-      className={`relative w-48 h-[164px] md:w-56 md:h-[192px] flex flex-col items-center justify-center text-center p-4 m-2 ${
-        index === 1 || index === 2
-          ? "bg-white text-black"
-          : "bg-black text-white"
-      }`}
+      className={`
+    relative w-48 h-[164px] md:w-56 md:h-[192px] flex flex-col items-center justify-center text-center p-4 m-2
+    ${
+      index === 1 || index === 2
+        ? "md:bg-white md:text-black md:dark:bg-white md:dark:text-black"
+        : "md:bg-black md:text-white"
+    }
+    ${
+      index === 0 || index === 2 ? "bg-white text-black" : "bg-black text-white"
+    }
+  `}
       style={{
         clipPath:
           "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
       }}
     >
       {/* <div className="mb-2 text-primary">{icon}</div> */}
-      <p className="text-3xl md:text-4xl font-bold">{value}</p>
-      <p className="text-xxs md:text-sm uppercase tracking-wider font-bold">
+      <p className="text-xl sm:text-2xl md:text-3xl font-bold">{value}</p>
+      <p className="text-[10px] sm:text-xs md:text-sm uppercase tracking-wider font-bold">
         {label}
       </p>
     </motion.div>
@@ -60,7 +66,7 @@ const SuccessStory2023Section = () => {
   return (
     <section
       id="success-story"
-      className="section-padding relative bg-background text-foreground overflow-hidden"
+      className="section-padding pb-16 md:pb-24 relative bg-background text-foreground overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <img
@@ -82,10 +88,10 @@ const SuccessStory2023Section = () => {
               className="mb-10 md:mb-12"
             >
               <h2 className="text-3xl md:text-3xl font-bold mb-3 text-primary">
-                SUCCESS STORY CBS GROUP IN 2023-24
+                SUCCESS STORY CBS GROUP
               </h2>
               <p className="text-lg md:text-xl text-accent font-semibold">
-                We believe in "Engage | Educate | Empower”
+                We believe in "Engage | Educate | Evolve"
               </p>
             </motion.div>
           </div>
