@@ -29,8 +29,8 @@ const PhotoGallerySection = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: i * 0.5,
-        duration: 0.5,
+        delay: i * 0.25,
+        duration: 0.25,
         type: "spring",
         stiffness: 100,
       },

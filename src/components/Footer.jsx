@@ -9,6 +9,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  Youtube,
 } from "lucide-react";
 import Logo from "@/asserts/main-logo.png"; // Adjust the path as necessary
 
@@ -76,20 +77,6 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
-                aria-label="Facebook"
-                className="text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Facebook size={24} />
-              </a>
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Twitter size={24} />
-              </a>
-              <a
-                href="#"
                 aria-label="LinkedIn"
                 className="text-primary-foreground/80 hover:text-accent transition-colors"
               >
@@ -102,10 +89,17 @@ const Footer = () => {
               >
                 <Instagram size={24} />
               </a>
+              <a
+                href="#"
+                aria-label="Youtube"
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+              >
+                <Youtube size={24} />
+              </a>
             </div>
             <p className="mt-4 text-sm font-semibold text-primary-foreground/80 flex items-center gap-2">
               <Mail className="w-4 h-4 text-white" />
-              bharat@careerbaskets.com
+              info@careerbasket.com
             </p>
             <p className="text-sm font-semibold text-primary-foreground/80 flex items-center gap-2">
               <Phone className="w-4 h-4 text-white" />
@@ -113,9 +107,13 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="border-t border-primary-foreground/20 pt-8 text-center">
+        <div className="border-t border-primary-foreground/20 pt-8 text-center font-bold">
           <p className="text-sm text-primary-foreground/80">
-            &copy; {currentYear} CBS Group of Companies. All rights reserved.
+            &copy; {currentYear} Career Basket Services Pvt. Ltd. | All Rights
+            Reserved
+          </p>
+          <p className="text-sm text-primary-foreground/80">
+            Privacy PolicyTerms of Use
           </p>
         </div>
       </div>
