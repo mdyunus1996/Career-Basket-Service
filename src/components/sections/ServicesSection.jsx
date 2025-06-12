@@ -7,35 +7,46 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { Users2, Globe, BookOpenCheck, Award, Layers } from "lucide-react";
+import {
+  Users2,
+  Globe,
+  BookOpenCheck,
+  Award,
+  Layers,
+  Globe2,
+  GraduationCap,
+  Landmark,
+  Video,
+  MessageCircle,
+} from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const services = [
   {
-    icon: <Users2 className="h-8 w-8 text-primary" />,
+    icon: <Globe2 className="h-8 w-8 text-primary" />,
     title: "Student Counselling Events",
     description: "UG, PG, and Study Abroad counseling and engagement programs.",
   },
   {
-    icon: <BookOpenCheck className="h-8 w-8 text-primary" />,
+    icon: <GraduationCap className="h-8 w-8 text-primary" />,
     title: "CLAT, MBA & STEM Masterclasses",
     description: "Focused academic masterclasses for competitive preparation.",
   },
   {
-    icon: <Award className="h-8 w-8 text-primary" />,
+    icon: <MessageCircle className="h-8 w-8 text-primary" />,
     title: "Educator Meetups & Awards",
     description:
       "Networking events, panel discussions, and educator recognition.",
   },
   {
-    icon: <Layers className="h-8 w-8 text-primary" />,
+    icon: <Landmark className="h-8 w-8 text-primary" />,
     title: "College Brand Collaborations",
     description: "Partnerships with institutions to amplify student outreach.",
   },
   {
-    icon: <Globe className="h-8 w-8 text-primary" />,
+    icon: <Video className="h-8 w-8 text-primary" />,
     title: "Content & Webinar Co-hosting",
     description: "Collaborative webinars and co-branded digital content.",
   },
@@ -48,7 +59,7 @@ const ServicesSection = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: i * 0.2,
+        delay: i * 0.5,
         duration: 0.5,
         type: "spring",
         stiffness: 100,
@@ -78,12 +89,13 @@ const ServicesSection = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="flex flex-col relative p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 bg-white"
             >
-              <CardHeader className="items-center text-center">
-                <CardTitle className="text-primary text-lg md:text-xl font-semibold">
-                  {service.name}
+              <CardHeader className="items-center text-center px-0">
+                <div className="flex justify-center">{service.icon}</div>
+                <CardTitle className="text-primary text-lg md:text-lg font-semibold">
+                  {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow px-0">
                 <CardDescription className="text-center">
                   {service.description}
                 </CardDescription>
