@@ -87,7 +87,7 @@ const ServicesSection = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="flex flex-col relative p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 bg-white/80 backdrop-blur-sm"
+              className="flex flex-col relative p-4 rounded-xl shadow-md hover:shadow-2xl border-t-4 border-primary transition-all duration-300 bg-white/80 backdrop-blur-sm"
             >
               <CardHeader className="items-center text-center px-0">
                 <div className="flex justify-center">{service.icon}</div>

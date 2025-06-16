@@ -37,17 +37,31 @@ const Hexagon = ({ value, label, icon, delay, index }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay }}
+      //     className={`
+      //   relative w-48 h-[164px] md:w-56 md:h-[192px] flex flex-col items-center justify-center text-center p-4 m-2
+      //   ${
+      //     index === 1 || index === 2
+      //       ? "md:bg-white md:text-black md:dark:bg-white md:dark:text-black"
+      //       : "md:bg-black md:text-white"
+      //   }
+      //   ${
+      //     index === 0 || index === 2 ? "bg-white text-black" : "bg-black text-white"
+      //   }
+      // `}
+
       className={`
-    relative w-48 h-[164px] md:w-56 md:h-[192px] flex flex-col items-center justify-center text-center p-4 m-2
-    ${
-      index === 1 || index === 2
-        ? "md:bg-white md:text-black md:dark:bg-white md:dark:text-black"
-        : "md:bg-black md:text-white"
-    }
-    ${
-      index === 0 || index === 2 ? "bg-white text-black" : "bg-black text-white"
-    }
-  `}
+        relative w-48 h-[164px] md:w-56 md:h-[192px] flex flex-col items-center justify-center text-center p-4 m-2
+        ${
+          index === 1 || index === 2
+            ? "md:bg-maroon md:text-black md:dark:bg-maroon md:dark:text-black"
+            : "md:bg-primary md:text-black"
+        }
+        ${
+          index === 0 || index === 2
+            ? "bg-maroon text-black"
+            : "bg-primary text-black"
+        }
+      `}
       style={{
         clipPath:
           "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",

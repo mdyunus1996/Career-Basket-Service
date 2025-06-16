@@ -1,8 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import {
+  Linkedin,
+  Instagram,
+  Youtube,
+  MapPin,
+  Mail,
+  Phone,
+  Network,
+  Share2,
+} from "lucide-react";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -45,14 +54,15 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            Partner With CBS
+          </h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            <span className="font-bold">Partner With CBS :</span> Let’s build
-            meaningful opportunities together.
+            Let’s build meaningful opportunities together.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -60,34 +70,71 @@ const ContactSection = () => {
             transition={{ duration: 0.7 }}
             className="space-y-11"
           >
-            <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            {/* Locations Card */}
+            <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary">
               <div className="p-3 bg-primary/10 rounded-full text-primary">
                 <MapPin size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Locations</h3>
                 <p className="text-foreground/70 text-sm">
-                  Chennai | Mumbai | Delhi | Kota | Hyderbad | Vijayawada |
-                  Visakhapatnam
+                  Chennai | Mumbai | Delhi | Kota | <br />
+                  Hyderabad | Vijayawada | Visakhapatnam
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="p-3 bg-primary/10 rounded-full text-primary">
-                <Mail size={24} />
+
+            {/* Email and Call in a Responsive Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary">
+                <div className="p-3 bg-primary/10 rounded-full text-primary">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Email Us</h3>
+                  <p className="text-foreground/70">info@careerbasket.com</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold">Email Us</h3>
-                <p className="text-foreground/70">info@careerbasket.com</p>
+              <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary">
+                <div className="p-3 bg-primary/10 rounded-full text-primary">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Call Us</h3>
+                  <p className="text-foreground/70">+91- 9444334755</p>
+                </div>
               </div>
             </div>
-            <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow">
+
+            <div className="flex items-start space-x-4 p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary">
               <div className="p-3 bg-primary/10 rounded-full text-primary">
-                <Phone size={24} />
+                <Share2 size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold">Call Us</h3>
-                <p className="text-foreground/70">+91- 9444334755</p>
+                <h3 className="text-xl font-semibold">Connect With Us</h3>
+                <div className="flex space-x-4 mt-1">
+                  <a
+                    href="#"
+                    aria-label="LinkedIn"
+                    className="charcoal-gray hover:text-accent transition-colors"
+                  >
+                    <Linkedin size={24} />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Instagram"
+                    className="charcoal-gray hover:text-accent transition-colors"
+                  >
+                    <Instagram size={24} />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Youtube"
+                    className="charcoal-gray hover:text-accent transition-colors"
+                  >
+                    <Youtube size={24} />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -140,7 +187,7 @@ const ContactSection = () => {
               <textarea
                 name="message"
                 id="message"
-                rows="1"
+                rows="2"
                 required
                 className="w-full px-4 py-2 border border-input rounded-md focus:ring-primary focus:border-primary transition-colors"
               ></textarea>

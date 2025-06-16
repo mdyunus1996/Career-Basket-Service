@@ -29,7 +29,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 50 }}
-      className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md shadow-sm"
+      className="sticky top-0 z-50 w-full bg-background backdrop-blur-md shadow-sm"
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-4 md:px-6">
         <a

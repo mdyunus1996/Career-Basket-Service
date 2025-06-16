@@ -25,7 +25,9 @@ const itemVariants = {
 
 const CBSFoundationSection = () => {
   return (
-    <section className="section-padding sm:px-4" id="foundation">
+    <section className="" id="foundation">
+      <div className="my-12 w-full h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent" />
+
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -83,7 +85,7 @@ const CBSFoundationSection = () => {
 
         <div className="text-center mb-8">
           <h3 className="text-2xl font-semibold text-primary">
-            CBS Foundation Impact Highlights
+            Impact Highlights
           </h3>
           <p className="text-sm text-foreground/60 font-bold">
             CBS Group 2023–24

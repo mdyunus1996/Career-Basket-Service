@@ -17,9 +17,9 @@ const HomePage = () => {
       <AboutUsSection />
       <SuccessStoriesSection />
       <OurVerticalsSection />
+      <ServicesSection />
       <CBSFoundationSection />
       <ClientPartnershipsSection />
-      <ServicesSection />
       <PhotoGallerySection />
       <ContactSection />
     </>

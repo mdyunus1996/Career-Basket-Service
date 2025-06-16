@@ -12,7 +12,7 @@ import { ArrowRight, Building, Users, MonitorPlay } from "lucide-react";
 
 const subsidiaries = [
   {
-    name: "Student Outreach & Events",
+    name: "Student Outreach",
     description:
       "Career and admissions events, masterclasses, and student engagement drives across India’s leading education hubs.",
   },
@@ -73,7 +73,7 @@ const OurVerticalsSection = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="flex flex-col relative p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 bg-white"
+              className="flex flex-col relative p-4 rounded-xl shadow-md hover:shadow-2xl border-t-4 border-primary transition-all duration-300 bg-white"
             >
               <CardHeader className="items-center text-center">
                 {/* <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
