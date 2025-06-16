@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
 
-    --primary: 45,100%,60%; /* Soft Amber */
+    --primary: 37, 100%, 50%; /* Soft Amber */
     --primary-rgb: 45.9,96.7%,64.5%; /* For radial gradient */
     --primary-foreground: 210 20% 98%; /* Almost White */
     --brandRed: 0 73.7% 41.8%;
@@ -118,7 +118,8 @@
 }
 
 .deep-maroon {
-  color: hsl(0, 100%, 60%);
+  /* color: hsl(0, 100%, 60%); */
+  color: #9C0001;
 }
 
 .charcoal-gray {
