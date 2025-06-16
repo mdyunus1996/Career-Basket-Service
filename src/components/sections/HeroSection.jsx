@@ -7,10 +7,10 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative bg-gradient-radial-hero min-h-[80vh] flex items-center overflow-hidden"
+      className="relative bg-gradient-radial-hero min-h-[92vh] flex items-center overflow-hidden"
     >
       {/* <div className="absolute inset-0 bg-primary opacity-5 -z-10"></div> */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-transparent -z-10"></div>
 
       <div className="absolute inset-0 z-0">
         <img
@@ -21,50 +21,44 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       </div>
 
-      <div className="container z-10 mx-auto px-4 md:px-6 text-center">
+      <div className="container z-10 mx-auto px- md:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 deep-maroon drop-shadow-xl">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold drop-shadow-xl bg-gradient-to-b text-maroon bg-clip-text">
             Career Basket Services
-            <br />
-            <span
-              className="text-1xl md:text-2xl lg:text-3xl font-bold mb-6 deep-maroon drop-shadow-md"
-              // style={{ color: "#9B0000" }}
-            >
-              Empowering Students. Engaging Educators. Enabling Institutions.
-            </span>
           </h1>
+          <br />
+          <p className="text-1xl md:text-2xl lg:text-2xl font-bold mb-6 deep-maroon">
+            Empowering Students | Engaging Educators | Enabling Institutions.
+          </p>
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto mb-10 text-white drop-shadow-md font-medium">
-            Your trusted partner in career discovery, student outreach, and
-            educator engagement since 2017.
+            Your trusted partner in career discovery,student outreach,
+            <br />
+            <span> and educator engagement since 2017.</span>
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 ">
             <Button
               size="lg"
-              className="bg-gradient-primary charcoal-gray hover:opacity-90 hover:font-extrabold transition-opacity neumorphism-button !shadow-none  font-bold"
               onClick={() =>
                 document
                   .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
+              className="
+   bg-gradient-primary
+   text-lg
+  charcoal-gray font-bold 
+    px-6 py-3 rounded-2xl 
+    hover:shadow-none 
+    hover:opacity-90 hover:fontextrabold 
+    transition-all duration-300 ease-in-out
+  "
             >
-              Explore Our Services
+              Let's Partner
             </Button>
-            {/* <Button
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:bg-primary/10 transition-colors shadow-md"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Get In Touch
-            </Button> */}
           </div>
         </motion.div>
         {/* <motion.div
